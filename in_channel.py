@@ -8,7 +8,7 @@ def in_channel(allow_channel):
             channel_info = message.channel._client.channels[channel_id]
             channel = channel_info['name']
             if allow_channel not in (channel, channel_id):
-                message.reply("Please post in #{}".format(allow_channel))
+                # message.reply("Please post in #{}".format(allow_channel))
                 return
             return func(message, *args, **kargs)
         return wrapper
